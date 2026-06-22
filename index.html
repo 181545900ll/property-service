@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧物业 - 小区物业服务</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #1a5276 0%, #2e86c1 100%); color: #fff; padding: 60px 20px 80px; text-align: center; }
+        .header h1 { font-size: 36px; margin-bottom: 12px; }
+        .header p { font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .nav { background: #fff; border-bottom: 1px solid #e8e8e8; padding: 0 20px; position: sticky; top: 0; z-index: 100; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 28px; overflow-x: auto; }
+        .nav a { display: block; padding: 16px 0; color: #555; text-decoration: none; font-size: 15px; white-space: nowrap; border-bottom: 2px solid transparent; }
+        .nav a:hover { color: #2e86c1; border-bottom-color: #2e86c1; }
+        .section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { font-size: 28px; font-weight: 600; margin-bottom: 12px; color: #1a5276; }
+        .section-desc { color: #666; margin-bottom: 36px; font-size: 16px; }
+        .services { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .service-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 28px; transition: box-shadow 0.2s; }
+        .service-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .service-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+        .service-card h3 { font-size: 18px; margin-bottom: 8px; }
+        .service-card p { color: #666; font-size: 14px; }
+        .fee-section { background: #f8f9fa; }
+        .fee-card { background: #fff; border-radius: 12px; padding: 32px; max-width: 500px; margin: 0 auto; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .fee-card h3 { text-align: center; margin-bottom: 24px; color: #1a5276; }
+        .fee-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .fee-amount { font-weight: 600; color: #e74c3c; }
+        .btn-pay { display: block; width: 100%; padding: 14px; margin-top: 24px; background: #2e86c1; color: #fff; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; font-weight: 500; }
+        .btn-pay:hover { background: #1a5276; }
+        .notice-list { display: flex; flex-direction: column; gap: 16px; }
+        .notice-item { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 20px 24px; }
+        .notice-item .date { color: #999; font-size: 13px; margin-bottom: 4px; }
+        .notice-item h4 { font-size: 16px; margin-bottom: 6px; }
+        .notice-item p { color: #666; font-size: 14px; }
+        .qa-list { display: flex; flex-direction: column; gap: 12px; }
+        .qa-item { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 20px 24px; }
+        .qa-item h4 { color: #1a5276; font-size: 15px; margin-bottom: 6px; }
+        .qa-item p { color: #555; font-size: 14px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+        .contact-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 24px; text-align: center; }
+        .contact-card .icon { font-size: 32px; margin-bottom: 12px; }
+        .contact-card h4 { font-size: 16px; margin-bottom: 4px; }
+        .contact-card p { color: #2e86c1; font-weight: 500; }
+        .footer { background: #1a5276; color: rgba(255,255,255,0.8); text-align: center; padding: 32px 20px; font-size: 14px; }
+        @media (max-width: 640px) {
+            .header h1 { font-size: 28px; }
+            .services { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>智慧物业服务</h1>
+    <p>为您提供便捷的物业缴费、报修投诉、工单查询等一站式服务</p>
+</div>
+<div class="nav">
+    <div class="nav-inner">
+        <a href="#services">服务</a>
+        <a href="#fee">物业缴费</a>
+        <a href="#notice">公告</a>
+        <a href="#qa">常见问题</a>
+        <a href="#contact">联系我们</a>
+    </div>
+</div>
+<div class="section" id="services">
+    <h2 class="section-title">我们的服务</h2>
+    <p class="section-desc">覆盖您日常所需的各项物业服务</p>
+    <div class="services">
+        <div class="service-card"><div class="service-icon" style="background:#e8f8f5;">💰</div><h3>物业缴费</h3><p>在线查询物业费欠费情况，支持支付宝在线充值缴费</p></div>
+        <div class="service-card"><div class="service-icon" style="background:#fef9e7;">🔧</div><h3>报事报修</h3><p>一键提交维修申请，实时跟踪维修进度</p></div>
+        <div class="service-card"><div class="service-icon" style="background:#fdedec;">📢</div><h3>投诉建议</h3><p>提交投诉与建议，我们将第一时间跟进处理</p></div>
+        <div class="service-card"><div class="service-icon" style="background:#eaf2f8;">📋</div><h3>工单查询</h3><p>随时查询报修、投诉等工单的处理进度</p></div>
+        <div class="service-card"><div class="service-icon" style="background:#f5eef8;">📞</div><h3>物业客服</h3><p>联系物业中心、查询管家电话，获取即时帮助</p></div>
+        <div class="service-card"><div class="service-icon" style="background:#e8f6f3;">🍜</div><h3>周边生活</h3><p>发现周边美食、便利店等生活服务信息</p></div>
+    </div>
+</div>
+<div class="section fee-section" id="fee">
+    <h2 class="section-title" style="text-align:center;">物业缴费</h2>
+    <p class="section-desc" style="text-align:center;">在线查询并缴纳物业费</p>
+    <div class="fee-card">
+        <h3>当前费用</h3>
+        <div class="fee-item"><span>物业费</span><span class="fee-amount">¥368.50</span></div>
+        <div class="fee-item"><span>公摊水电费</span><span class="fee-amount">¥56.20</span></div>
+        <div class="fee-item"><span>垃圾清运费</span><span class="fee-amount">¥15.00</span></div>
+        <div class="fee-item" style="border-bottom:none;"><strong>合计</strong><strong style="color:#e74c3c;">¥439.70</strong></div>
+        <button class="btn-pay">立即缴费</button>
+    </div>
+</div>
+<div class="section" id="notice">
+    <h2 class="section-title">物业公告</h2>
+    <p class="section-desc">最新小区通知与公告</p>
+    <div class="notice-list">
+        <div class="notice-item"><div class="date">2026年6月15日</div><h4>关于小区绿化养护的通知</h4><p>尊敬的业主，物业服务中心将于6月20日-22日对小区绿化进行养护作业，届时部分区域可能临时封闭，敬请谅解。</p></div>
+        <div class="notice-item"><div class="date">2026年6月10日</div><h4>小区停水提前通知</h4><p>因市政供水管道检修，6月12日14:00-17:00小区将暂停供水，请各位业主提前做好储水准备。</p></div>
+        <div class="notice-item"><div class="date">2026年6月5日</div><h4>停车位可以转租吗？</h4><p>根据小区停车管理规定，业主停车位可以转租，但需到物业中心登记备案，详情请咨询物业管家。</p></div>
+    </div>
+</div>
+<div class="section" id="qa">
+    <h2 class="section-title">常见问题</h2>
+    <p class="section-desc">业主最常问的问题解答</p>
+    <div class="qa-list">
+        <div class="qa-item"><h4>长期不交物业费有什么后果？</h4><p>根据物业管理条例，业主应当按时缴纳物业费。逾期未缴纳的，物业服务企业可以催缴，催缴后仍不缴纳的，可能会产生违约金。</p></div>
+        <div class="qa-item"><h4>快递代收丢失谁负责？</h4><p>物业服务中心提供的快递代收为便民服务。建议贵重物品本人签收，如发生丢失，物业将协助调查监控。</p></div>
+        <div class="qa-item"><h4>小区绿化养护时间表？</h4><p>春季补植施肥，夏季修剪浇灌，秋季病虫害防治，冬季修剪清理。具体时间提前在公告栏通知。</p></div>
+        <div class="qa-item"><h4>停车位可以转租吗？</h4><p>业主停车位可以转租给同小区其他业主，但须到物业中心办理备案登记。</p></div>
+    </div>
+</div>
+<div class="section" id="contact">
+    <h2 class="section-title">联系我们</h2>
+    <div class="contact-grid">
+        <div class="contact-card"><div class="icon">📞</div><h4>物业中心电话</h4><p>0571-88886666</p></div>
+        <div class="contact-card"><div class="icon">🏠</div><h4>物业中心地址</h4><p>小区东门物业服务中心</p></div>
+        <div class="contact-card"><div class="icon">⏰</div><h4>服务时间</h4><p>周一至周日 8:00-20:00</p></div>
+        <div class="contact-card"><div class="icon">💬</div><h4>智能客服</h4><p>物业小帮手在线服务</p></div>
+    </div>
+</div>
+<div class="footer"><p>&copy; 2026 智慧物业服务 | 为美好生活服务</p></div>
+</body>
+</html>
